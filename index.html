@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="**** Multipose.">
+        content="Unsupervised Domain Adaptation in Human Multipose Thermal Imaging">
   <meta name="keywords" content="Thermal, pose">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>**** Multipose</title>
+  <title>Unsupervised Domain Adaptation in Human Multipose Thermal Imaging</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -64,7 +64,7 @@
         </a>
         <div class="navbar-dropdown">
           <a class="navbar-item" href="https://Supercomputacion-Algoritmos/thermal_posing">
-            Thermal Posing
+            MultiPose
           </a>
         </div>
       </div>
@@ -79,10 +79,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">**** Multipose</h1>
+          <h1 class="title is-1 publication-title">Unsupervised Domain Adaptation in Human Multipose Thermal Imaging</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href=https://www.marcoslupion.com/">Lupión, M.</a>,</span>
+              <a href="https://www.marcoslupion.com/">Lupión, M.</a>,</span>
             <span class="author-block">
               <a href="https://vicente-gonzalez-ruiz.github.io">González-Ruiz, V.</a>,</span>
             <span class="author-block">
@@ -92,16 +92,12 @@
               <a href="https://sites.google.com/ual.es/pmortigosa">M. Ortigosa, Pilar</a>
             </span>
           </div>
-
           <div class="is-size-5 publication-authors">
-            <!-- <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>  -->
             <span class="author-block">University of Almería</span>
           </div>
-
+          <!--
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -120,7 +116,6 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -130,7 +125,6 @@
                   <span>Video</span>
                 </a>
               </span>
-              <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/Supercomputacion-Algoritmos/thermal_posing"
                    class="external-link button is-normal is-rounded is-dark">
@@ -140,7 +134,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://github.com/Supercomputacion-Algoritmos/thermal_pose/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
@@ -152,27 +145,30 @@
             </div>
 
           </div>
+        -->
         </div>
       </div>
     </div>
   </div>
 </section>
 
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+    <div class="hero-body has-text-centered">
+      <video id="teaser" controls preload autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/SequenceMultiPerson.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Thermal Pose</span> Find poses in thermal images.
+        Human Pose Estimation using the proposed solution.  
+        <!-- <span class="dnerf">Thermal Pose</span>.-->
       </h2>
     </div>
   </div>
 </section>
 
-
+<!--
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -229,7 +225,7 @@
     </div>
   </div>
 </section>
-
+-->
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -239,30 +235,22 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">thermal_pose</span> can ... .
+            Recently, thermal cameras are being incorporated into smart environments due to privacy preservation and the ability to capture images even in low light conditions. In some applications, such as activity recognition or physical therapy developed in these environments, Human Pose Estimation (HPE) techniques, such as OpenPose, are used to extract the human
+pose, facilitating the development of AI solutions. Our study addresses the challenge of leveraging pre-trained deep learning
+models for HPE from the visible spectrum to thermal imaging, without retraining them. The proposed solution involves an innovative unsupervised domain adaptation approach, incorporating
+a domain adapter (a neural network) that translates thermal images into a self-learned domain, with the objective of enhancing
+the performance of the original HPE model. To train the domain adapter, a evaluator (another neural network) is used to assess
+the correctness of the poses found in this new HPE-friendly domain. The evaluation using OpenPose, conducted on a thermal
+dataset recored at the Smart Home of the University of Almería, demonstrates a significant improvement. Results reveal a pose
+estimation accuracy of over 86% without retraining OpenPose, in contrast to a baseline accuracy of less than 16%. Furthermore,
+the mean average precision values exceed 97%, in both validation and test datasets, underscoring the efficacy of the proposed
+method in addressing domain mismatch challenges in HPE applications for thermal imaging.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
 
-    <!-- Paper video. -->
+    <!-- Paper video.
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
@@ -272,58 +260,169 @@
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+    -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-fifths">
+        <h2 class="title is-3">Problem</h2>
+        <div class="publication-video">
+          <img src="static/images/solution_architecture_problem.png" allowfullscreen></img>
+        </div>
+      </div>
+      <div class="column is-two-fifths">
+        <h2 class="title is-3">Solution</h2>
+        <div class="publication-video">
+          <img src="static/images/solution_architecture_inference.png" allowfullscreen></img>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-fifths">
+        <h2 class="title is-3">Training architecture</h2>
+        <div class="publication-video">
+          <img src="static/images/solution_architecture_training.png" allowfullscreen></img>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 
 <section class="section">
+  <div class="section has-text-centered container is-max-desktop">
+    <h2 class="title is-3 is-centered">Comparison with OpenPose</h2>
+    <div class="content has-text-centered">
+      <video id="replay-video"
+              controls
+              muted
+              preload
+              playsinline
+              width="75%">
+        <source src="./static/videos/comparison.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+  
+<section class="section">
+  <!--
+  <div class="section has-text-centered">
+    <h2 class="title is-3 is-centered">Evolution of the synthetic image</h2>
+  </div>
+  -->  
   <div class="container is-max-desktop">
 
+    <!--
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
+          <h2 class="title is-4">Pose 1</h2>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/dollyzoom-stacked.mp4"
                     type="video/mp4">
           </video>
         </div>
       </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
+        <div class="content">
+          <h2 class="title is-4">Pose 2</h2>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-4">Pose 3</h2>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
+    -->
+    <div class="section has-text-centered">
+      <h2 class="title is-3 is-centered">Impact of the different components of the loss function</h2>
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        In this section, the evolution of the generated synthetic images as the domain adapter learns is shown. As well, the different terms of the loss 
+        function are compared in order to appreciate their impact in the loss value and therefore, the resulting synthetic image. 
+      </p>
+    </div>
 
-    <!-- Animation. -->
+    <div class="column is-full-width">
+      <h3 class="title is-4">Correctness loss is set to zero</h3>
+      <div class="content has-text-justified">
+        <p>
+          The OpenPose-friendly image does not take into account the results of the Evaluator model that discrimines if the generated pose is correct for the given thermal image. 
+        </p>
+      </div>
+      <div class="content has-text-centered">
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                autoplay
+                width="50%">
+          <source src="./static/videos/unet_0.0_0.5_20.0.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="column is-full-width">
+      <h3 class="title is-4">L1 loss is set to zero</h3>
+      <div class="content has-text-justified">
+        <p>
+          The OpenPose-friendly image is not compared with the original thermal image, evolving wihtout being restricted
+          to maintain the same structure.  
+        </p>
+      </div>
+      <div class="content has-text-centered">
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                autoplay
+                width="50%">
+          <source src="./static/videos/unet_0.01_0.0_20.0.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="column is-full-width">
+      <h3 class="title is-4">Pose loss is set to zero</h3>
+      <div class="content has-text-justified">
+        <p>          
+          The correct annotated poses are not compared with the inferred poses in the synthetic image. 
+        </p>
+      </div>
+      <div class="content has-text-centered">
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                autoplay
+                width="50%">
+          <source src="./static/videos/unet_0.1_0.5_0.0.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+      
+    
+
+    <!--
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
         <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
@@ -355,9 +454,6 @@
           </div>
         </div>
         <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
         <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
@@ -376,14 +472,11 @@
                     type="video/mp4">
           </video>
         </div>
-        <!--/ Re-rendering. -->
 
       </div>
     </div>
-    <!--/ Animation. -->
+    
 
-
-    <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
@@ -408,19 +501,19 @@
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
 
   </div>
+  -->
 </section>
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
+    <pre><code>@article{lupion24unsupervised,
   author    = {Lupión, M. and González-Ruiz, V. and Sanjuan, Juan F. and M. Ortigosa, Pilar},
-  title     = {*** Multipose},
-  journal   = {IEEE ...},
+  title     = {Unsupervised Domain Adaptation in Human Multipose Thermal Imaging},
+  journal   = {(to be published)},
   year      = {2024},
 }</code></pre>
   </div>
