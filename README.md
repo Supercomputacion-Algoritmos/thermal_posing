@@ -8,7 +8,7 @@ If you find our work useful for your research work, please cite:
   author    = {Lupión, M. and González-Ruiz, V. and Sanjuan, Juan F. and M. Ortigosa, Pilar},
   title     = {Unsupervised Domain Adaptation in Thermal Imaging for Multi-person Pose Estimation},
   journal   = {(to be published)},
-  year      = {2024},
+  year      = {(to be published)},
 }
 ```
 
