@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Unsupervised Domain Adaptation in Thermal Imaging for Multi-person Pose Estimation">
+        content="Thermal Imaging Domain Adaptation for Multi-person Pose Estimation">
   <meta name="keywords" content="Thermal, pose">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Unsupervised Domain Adaptation in Thermal Imaging for Multi-person Pose Estimation</title>
+  <title>Thermal Imaging Domain Adaptation for Multi-person Pose Estimation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -238,16 +238,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recently, thermal cameras are being incorporated into smart environments due to privacy preservation and the ability to capture images even in low light conditions. In some applications, such as activity recognition or physical therapy developed in these environments, Human Pose Estimation (HPE) techniques, such as OpenPose, are used to extract the human
-pose, facilitating the development of AI solutions. Our study addresses the challenge of leveraging pre-trained deep learning
-models for HPE from the visible spectrum to thermal imaging, without retraining them. The proposed solution involves an innovative unsupervised domain adaptation approach, incorporating
-a domain adapter (a neural network) that translates thermal images into a self-learned domain, with the objective of enhancing
-the performance of the original HPE model. To train the domain adapter, a evaluator (another neural network) is used to assess
-the correctness of the poses found in this new HPE-friendly domain. The evaluation using OpenPose, conducted on a thermal
-dataset recored at the Smart Home of the University of Almería, demonstrates a significant improvement. Results reveal a pose
-estimation accuracy of over 86% without retraining OpenPose, in contrast to a baseline accuracy of less than 16%. Furthermore,
-the mean average precision values exceed 97%, in both validation and test datasets, underscoring the efficacy of the proposed
-method in addressing domain mismatch challenges in HPE applications for thermal imaging.
+            Thermal cameras are increasingly deployed in privacy-sensitive smart environments and enable perception under adverse illumination, yet state-of-the-art multi-person human pose estimators trained on visible imagery fail dramatically on thermal data. This work introduces an unsupervised domain adaptation framework that transfers a pre-trained visible-spectrum pose estimator to low-resolution thermal imagery without retraining the pose model. We learn a domain adapter that maps thermal frames into a self-discovered, pose-estimation-friendly representation, optimized end-to-end through a differentiable evaluator network. The evaluator is trained on automatically generated supervision that discriminates plausible from implausible poses by leveraging pose completeness and silhouette consistency, thereby avoiding manual annotation and paired visible–thermal capture. The domain adapter is trained with a composite objective that balances structural fidelity, evaluator-based pose correctness, and heatmap-level pose consistency on the subset of confident samples. Experiments on a multi-person thermal dataset show that OpenPose coverage rises from 10.25% correct poses to 86-90% after adaptation, while missing-pose cases drop to below 1%. Using OpenPose-derived pseudo-ground truth, the adapted pipeline achieves a mean averaged precision greater than 0.97 on held-out users, with low keypoint error (around 3 pixels). These results demonstrate that robust thermal pose estimation can be obtained from existing visible-spectrum models via lightweight unsupervised adaptation, enabling practical deployment in privacy-preserving sensing without costly data collection or retraining.
           </p>
         </div>
       </div>
@@ -513,9 +504,9 @@ method in addressing domain mismatch challenges in HPE applications for thermal 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{lupion24unsupervised,
+    <pre><code>@article{lupion26unsupervised,
   author    = {Lupión, M. and González-Ruiz, V. and Sanjuan, Juan F. and M. Ortigosa, Pilar},
-  title     = {Unsupervised Domain Adaptation in Thermal Imaging for Multi-person Pose Estimation},
+  title     = {Thermal Imaging Domain Adaptation for Multi-person Pose Estimation},
   journal   = {(to be published)},
   year      = {(to be published)},
 }</code></pre>
