@@ -4,7 +4,7 @@ This is the repository that contains source code and demo media for the [Multipo
 
 If you find our work useful for your research work, please cite:
 ```
-@article{lupion2024multipose
+@article{lupion2026multipose
   author    = {Lupión, M. and González-Ruiz, V. and Sanjuan, Juan F. and M. Ortigosa, Pilar},
   title     = {Unsupervised Domain Adaptation in Thermal Imaging for Multi-person Pose Estimation},
   journal   = {(to be published)},
